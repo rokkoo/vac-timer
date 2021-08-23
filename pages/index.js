@@ -16,7 +16,7 @@ endTime.setSeconds(0);
 function App() {
   const date = useMemo(() => {
     const { days, hours, minutes, seconds } = calcTimeDelta(endTime);
-    return `${days}:${hours}${minutes}:${seconds}`;
+    return `${days}:${hours}:${minutes}:${seconds}`;
   }, []);
 
   return (
