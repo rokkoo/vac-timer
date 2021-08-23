@@ -14,26 +14,35 @@ endTime.setSeconds(0);
 
 function App() {
   return (
-    <div
-      className={styles.container}
-      style={{ backgroundColor: '#2d2d2e', minHeight: '100vh' }}
-    >
-      <div className={styles.main}>
-        <Photos />
-        <div className={styles.timerContainer}>
-          <Countdown
-            date={endTime}
-            renderer={(props) => (
-              <CountDownComp
-                {...props}
-                className={styles.timer}
-                daysClassName={styles.days}
-              />
-            )}
-          />
+    <html>
+      <Head>
+        <title>Cuánto tiempo queda?</title>
+        <meta
+          name="description"
+          content="Cuándo tiempo queda para las vacas?"
+        />
+      </Head>
+      <div
+        className={styles.container}
+        style={{ backgroundColor: '#2d2d2e', minHeight: '100vh' }}
+      >
+        <div className={styles.main}>
+          <Photos />
+          <div className={styles.timerContainer}>
+            <Countdown
+              date={endTime}
+              renderer={(props) => (
+                <CountDownComp
+                  {...props}
+                  className={styles.timer}
+                  daysClassName={styles.days}
+                />
+              )}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </html>
   );
 }
 
