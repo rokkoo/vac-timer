@@ -47,7 +47,7 @@
   position: relative;
 }
 
-.timerContainer::before {
+.timerContainers::before {
   content: '';
   position: absolute;
   inset: 0;
