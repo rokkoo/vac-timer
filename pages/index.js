@@ -8,6 +8,7 @@ import styles from '../styles/Home.module.css';
 
 const endTime = new Date();
 endTime.setMonth(8);
+endTime.setDate(11);
 endTime.setHours(6);
 endTime.setMinutes(45);
 endTime.setSeconds(0);
