@@ -14,7 +14,10 @@ endTime.setSeconds(0);
 
 function App() {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ backgroundColor: '#2d2d2e', minHeight: '100vh' }}
+    >
       <div className={styles.main}>
         <Photos />
         <div className={styles.timerContainer}>
@@ -29,7 +32,6 @@ function App() {
             )}
           />
         </div>
-        <div className={styles.bg} />
       </div>
     </div>
   );

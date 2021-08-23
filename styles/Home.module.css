@@ -1,21 +1,8 @@
 .container {
-  background-color: #d9afd9;
-  background-image: linear-gradient(60deg, #2d2d2e 100%, #e2ebf0 100%);
-
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: gradient-animation 1s cubic-bezier(0.23, 1, 0.32, 1) infinite;
   min-height: 100vh;
-}
-
-.container::after {
-  background: linear-gradient(to right, #64dfdf, #80ffdb);
-  transform: translateY(0%) scale(0.95);
-  filter: blur(60px);
-  animation: gradient-animation 1s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+  padding: 0 0.5rem;
+  background-color: #2d2d2e;
+  /* background-image: linear-gradient(60deg, #2d2d2e 100%, #e2ebf0 100%); */
 }
 
 .main {
@@ -42,7 +29,6 @@
 
 .timerContainer {
   z-index: 10;
-  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   border-radius: 10px;
   background: linear-gradient(
@@ -70,24 +56,3 @@
   transform: translateY(50%) scale(0.85);
   filter: blur(30px);
 }
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-} ;
