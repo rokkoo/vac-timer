@@ -8,7 +8,6 @@
 .imageContainer {
   /* height: 30px;
   margin: 0 12px; */
-  filter: blur(0.2px);
 }
 
 .imageContainers::after {
