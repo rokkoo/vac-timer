@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Countdown from 'react-countdown';
+import { useMemo } from 'react';
+import Countdown, { calcTimeDelta } from 'react-countdown';
 import CountDownComp from '../src/components/Countdown';
 import Photos from '../src/components/Photos';
 
@@ -14,13 +14,18 @@ endTime.setMinutes(45);
 endTime.setSeconds(0);
 
 function App() {
+  const date = useMemo(() => {
+    const { days, hours, minutes, seconds } = calcTimeDelta(endTime);
+    return `${days}:${hours}${minutes}:${seconds}`;
+  }, []);
+
   return (
     <html>
       <Head>
-        <title>Cuánto tiempo queda?</title>
+        <title>Cuánto tiempo queda? {date}</title>
         <meta
           name="description"
-          content="Cuándo tiempo queda para las vacas?"
+          content={`Cuándo tiempo queda para las vacas? ${date}`}
         />
       </Head>
       <div
