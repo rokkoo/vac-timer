@@ -16,13 +16,13 @@ endTime.setSeconds(0);
 function App() {
   const date = useMemo(() => {
     const { days, hours, minutes, seconds } = calcTimeDelta(endTime);
-    return `${days}:${hours}:${minutes}:${seconds}`;
+    return `Días ${days} , ${hours}:${minutes}:${seconds}`;
   }, []);
 
   return (
     <html>
       <Head>
-        <title>Cuánto tiempo queda? {date}</title>
+        <title>Cuánto tiempo queda?</title>
         <meta
           name="description"
           content={`Cuándo tiempo queda para las vacas? ${date}`}
